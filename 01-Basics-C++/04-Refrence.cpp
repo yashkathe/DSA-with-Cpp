@@ -14,7 +14,7 @@ int main()
 
     int a = 10;
 
-    // & is used to decalre a REFREBCE variable
+    // & is used to decalre a REFRENCE variable
     // and you have to assign a value as soons as you declare it
     int &r = a;
     // refrence doesnt consume memory it uses same memory of 'a'

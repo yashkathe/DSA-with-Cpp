@@ -1,4 +1,5 @@
 // Structures
+// Structure is a group of related data members
 
 #include <iostream>
 using namespace std;
