@@ -20,3 +20,13 @@
   - [Tree Recursion](./03-Recursion/03-tree-recursion.cpp)  
   - [Indirect Recursion](./03-Recursion/04-Indirect-recursion.cpp)  
   - [Nested Recursion](./03-Recursion/05-Nested-Recursion.cpp)    
+
+
+## Problems
+
+| Problem                                                                     | Link | Type      | Solution                                                                                                                                                                                                                        |
+| --------------------------------------------------------------------------- | ---- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Sum of natural numbers](./03-Recursion/Problems/sum-of-n-natural-nums.cpp) | -    | Recursion | Create a recursion formula. </br>  1 + 2 + 3 ... (n - 1) + n. </br> If n = 0 return 0 and if n > 0 : sum(n-1) * n                                                                                                               |
+| [Factorial](./03-Recursion/Problems/factorial.cpp)                          | -    | Recursion | Create a recursion formula. </br>  1 * 2 * 3 ... (n - 1) * n. </br> If n = 0 return 1 and if n > 0 : factorial(n-1) * n                                                                                                         |
+| [Power of a number](./03-Recursion/Problems/power.cpp)                      | -    | Recursion | pow(m,n) </br> if n = 0 return 1 </br> if n > 0 return pow(m, n-1) </br> bcause m* m * m *m * (n-1) times </br> **Version 2 - Smaller version** </br>      2 ^ 8 = ( 2 ^ 2 ) ^ 4 = ( 2 * 2)^4 </br> for odd: 2^9 = 2 * (2^2)^ 4 |
+| [Taylor Series](./03-Recursion/Problems/taylor-series.cpp)                  | -    | Recursion | In Taylor series you have to calculate multiple values of factorial as well as power so for this remember **When we have to involve multiple values in the recursion, then we can use static variables.** </br>                  |
