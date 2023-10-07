@@ -10,8 +10,8 @@
   - [Parameter passig methods](./01-Basics-C++/07-Paramter-passing-methods.cpp)
   - [Passing Array as parameter](./01-Basics-C++/08-Array-as-parameter.cpp)
   - [Passing Structure as parameter](./01-Basics-C++/09-Structure-as-parameter.cpp)
-- [Introduction](./02-Introduction/Readme.md) 
-  - [Static vs Dynamic memory](./02-Introduction/Readme.md) 
+- [Introduction](./02-Introduction) 
+  - [Static vs Dynamic memory](./02-Introduction) 
   - [Time and Space Complexity](./02-Introduction/Time-space-complexity.md)
 - [Recursion](./03-Recursion/)
   - [THEORY](./03-Recursion/README.md)
@@ -20,7 +20,7 @@
   - [Tree Recursion](./03-Recursion/03-tree-recursion.cpp)  
   - [Indirect Recursion](./03-Recursion/04-Indirect-recursion.cpp)  
   - [Nested Recursion](./03-Recursion/05-Nested-Recursion.cpp)    
-
+- [Array Theory](./04-Array/)
 
 ## Problems
 
