@@ -152,7 +152,7 @@ A[1][2] // Elemnent in 1st row and 2nd column
 consider variable x
 
 ```cpp
-it x = 10
+int x = 10
 ```
 This variable is stored in an **address** say **100/101**  
 
