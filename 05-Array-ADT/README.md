@@ -303,11 +303,123 @@ int Sum(struct Array arr)
 }
 ```
 
-<!-- ## Reversing an Array
+## Reversing an Array
+
+#### Method 1
+
+1. Create a seconnd array
+2. Copy elemets in reverse order from array 1 to array 2  
+3. The copy back elements from array 2 to array 1  
+
+#### Methoda 2 
+
+1. Swap First and Last elemnt 
+2. Keep coming inwards from left hand side and right hand side  
+
+
+## Left Shift 
+
+Keep in swapping arrays to the left hand side
+
+```text
+
+// initial array
+
+|0|1|2|3|4|
+
+// after left shift
+
+|1|2|3|4|0|
+
+```
+
+In this process we lose one element on left hand side whci h is added back to rihgt hand side  
+
+**Right shift** is vice versa of this  
+
+## Inseting in a sorted Array
+
+1. Start comparing elements from the last 
+2. And start shifting elemnts to the right 
+3. Eg: SO if x = 18
+4. Start shifting A[i+1] = A[i] ahead  
 
 ```cpp
-    for(i=Length - 1; j = 0; i >=0)
-    {
+while(A[i] > x)
+{
+    A[i+1] = A[i];
+    i--;
+}
 
+A[i+1] = x;
+```
+
+## Checking if array is sorted - isSorted(A,n)
+
+Where n = number of elements  
+
+```cpp
+for(i=0; i<n-1; i++)
+{
+    if(A[i] > A[i+1])
+        return false
+}
+return true
+```
+
+## Sorting -ve numbers and +ve numbers on left and right side respectively  
+
+1. We take two pointers 
+   1. i = left hand side - which counts positive numbers  - 0
+   2. j = right hand side - which counts negative numbers  - Length - 1
+2. When the number is -ve let i move ahead 
+3. When the number is +ve j should decrement
+
+```cpp
+while(i < j)
+{
+    while(A[i] < 0) 
+        i++
+    while (A[i] >= 0 )
+        j++
+    
+    if(i<j)
+    {
+        swap(A[i] , A[j])
     }
-``` -->
+}
+
+```
+
+## Merging Arrays
+ 
+Merging can only be done in **sorted array**  
+
+We have to combine two arrays to get a sorted array  
+
+1. Suppose we have two arrays A and B
+2. Compare A[i] to B[i]
+3. Whichever one is smaller move to Array C and increment its pointer
+4. Keep on doing this till both pointers are exhausted  
+
+```cpp
+
+while(i < m && j < n)
+{
+    if(A[i] < b[j])
+    {
+        C[k++] = A[i++];
+    }
+    else
+    {
+        C[k++] = B[j++];
+    }
+}
+
+```
+# Set Operations  
+
+1. Union
+2. Intersection
+3. Difference
+4. Set Membership
