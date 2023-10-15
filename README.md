@@ -29,3 +29,4 @@
   - [Biary Search](./05-Array-ADT/05-Binary-Search.cpp)
   - [Get, Set and Max](./05-Array-ADT/06-Get-Set-Max.cpp)
   - [Reversing](./05-Array-ADT/07-Reversing-an-array.cpp)
+- [Strings](./06-Strings/) 
