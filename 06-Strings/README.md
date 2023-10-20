@@ -122,12 +122,13 @@ char x[5] = {'A' , 'B' , 'C' , 'D' , 'E'}
 
 Sometimes an array will only be filled partially  
 EG:
+
 ```txt
 |J|O|H|N|\0 | | | | |
 ```
 
-SO **\0** is used to indicate end of string 
-It is called as **string delimiter** / **String terminator** 
+SO **\0** is used to indicate end of string
+It is called as **string delimiter** / **String terminator**
 
 So in C/C++ strings are delimited with null character that is \0.
 
@@ -145,7 +146,6 @@ char name[] = "JOHN"
 ```
 
 \0 also consumes space  
-
 
 ## Length of String
 
@@ -288,14 +288,14 @@ int main()
  i     j
 ```
 
-1. Keep comparing i and j 
+1. Keep comparing i and j
 2. increment i and decrement j
 
 ## Finding duplicates in a string  
 
-1.  Compare with other letters O(n^2)
-2.  Using hashtable for counting
-3.  Using bits
+1. Compare with other letters O(n^2)
+2. Using hashtable for counting
+3. Using bits
 
 #### 1. Compare with other letters
 
@@ -333,6 +333,7 @@ for(int i = 0; i < 26; i++)
 }
 
 ```
+
 #### 3. Using bits
 
 To know this method we should be familiar with bitwise operations  
@@ -348,7 +349,6 @@ For understanding Bitwise Operation we should know how the data is stored in a m
 So **One Byte** is **Eight Bits**  
 
 <img src="https://www.researchgate.net/publication/365659382/figure/fig3/AS:11431281099121854@1669209517904/Explanation-of-the-LSB-right-and-the-MSB-left-concepts.ppm" width="400"/>
-
 
 So now how digits are stored in memory in form of bits
 
@@ -381,7 +381,6 @@ So how does binary value of each digit looks like
 ```
 
 EG: Suppose we want to store **20**
-
 
 ```txt
 |  0  |  0 | 0  | 0  | 0 | 0 | 0 | 0 |
@@ -427,7 +426,6 @@ NUMERIC VALUE becomes 2
 If I perform leftshift by 2 on the first binary value again  
 The 1 will be **shifted** to the **left** by 2:
 
-
 ```txt
 
 H = H << 2
@@ -437,10 +435,9 @@ H = H << 2
 NUMERIC VALUE becomes 4
 ```
 
-**It means by shifting the number on the left hand side we are able to increase it by multiples of two** 
+**It means by shifting the number on the left hand side we are able to increase it by multiples of two**
 
 H = H << 5 gives us 32  
-
 
 #### 2. Bits ANDing (Masking)
 
@@ -475,6 +472,7 @@ a
 |0|0|0|0|0|0|0|0|
 
 ```
+
 We can take help of a for the following  
 Write down 1 at lsb of 1  
 
@@ -484,7 +482,7 @@ a
 
 ```
 
-a = a << 2 
+a = a << 2
 
 ```txt
 a
@@ -511,6 +509,7 @@ a
 |0|0|0|0|0|0|0|0|
 
 ```
+
 So:  
 
 a = 1
@@ -583,6 +582,7 @@ int mai()
 Anagram are two set of strings which are formed using same set of alphabets.
 
 #### Without Duplicates
+
 **Assuming there are no duplicates. If there are amy, use the previous method to check for duplicates**
 
 1. Again take a hash map with 26 indices which are filled with 0 initially  
@@ -627,6 +627,7 @@ int main()
 ```
 
 #### With duplicates
+
 **Now what if there are duplicates**
 
 eg:
@@ -640,6 +641,7 @@ observe
 ## Permutation of a string
 
 ### METHOD 1
+
 ```txt
 S = |A|B|C|\0|
 
@@ -666,11 +668,12 @@ b   c  a   c  a   b
 c   b  c   a  b   a
 
 ```
+
 This is **backtracking**  
 Backtracking is a recursive algorithmic technique for solving problems by incrementally trying different possibilities and undoing the previous step if they do not lead to a solution.
 
 See we have to use recursion to achieve backtracking.  
-And with the help of backtracking, we are performing brute force. 
+And with the help of backtracking, we are performing brute force.
 
 - A recursive procedure which is trying to explore everything is a **Backtracking Procedure**
 
@@ -680,7 +683,7 @@ And with the help of backtracking, we are performing brute force.
 
 So we need a few more data structures here  
 
-1. Result ARRAY - k 
+1. Result ARRAY - k
 We will be storing these alphabets A, B, C in here.
 2. Flag ARRAY  - i
 We should also know which letter is included, which is not included. So for that we will maintain a flag array  
@@ -705,8 +708,7 @@ c       K=2 I=2  | RES = [A,B,C, ] | A = [1, 1, 1, 0] | K = K+1
         Change values in flag array to 0  
 ```
 
-'I' always starts from 0 (traverse flag array) to check if letter is available 
-
+'I' always starts from 0 (traverse flag array) to check if letter is available
 
 ```cpp
 
@@ -754,6 +756,7 @@ bac(l=1,h=2,i=1) abc(l=1,h=2,i=0) cba(l=1,h=2,i=2)
 abc(l=2,h=2,i=2) cba(l=2,h=2,i=2) bac(l=2,h=2,i=1)
 
 ```
+
 1. When l = h we store that string
 2. We swap l and i
 
